@@ -2,7 +2,7 @@ def uber(String repoUrl){
     pipeline{
         agent any 
         stages{
-            stage('1-build'){
+            stage('1-clone'){
                 steps {
                     sh 'free -g'
                 }
