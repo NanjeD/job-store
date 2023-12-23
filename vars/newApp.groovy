@@ -4,7 +4,7 @@ def uber(String repoUrl){
         stages{
             stage('1-build'){
                 steps {
-                    sh 'free -m'
+                    sh 'free -g'
                 }
             }
             stage("Checkout Code"){
@@ -16,7 +16,7 @@ def uber(String repoUrl){
            stage ('2-closing'){
             steps{
                 echo "This is newapp"
-            }
+              }
            }
         }
     }
