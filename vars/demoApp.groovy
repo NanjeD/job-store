@@ -19,6 +19,11 @@ def nane(String repoUrl){
                    sh 'lsblk'
                }
            }
+           stage('This is code test'){
+            steps{
+                sh 'pwd'
+            }
+           }
        }
     }
 }
