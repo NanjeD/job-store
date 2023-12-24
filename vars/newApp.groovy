@@ -1,23 +1,24 @@
-def uber(String repoUrl){
-    pipeline{
-        agent any 
-        stages{
-            stage('1-clone'){
-                steps {
-                    sh 'free -g'
-                }
-            }
-            stage("Checkout Code"){
+def seek(String repoUrl){
+    pipeline {
+       agent any
+       stages {
+           stage("Tools initialization"){
+               steps {
+                   sh 'lscpu'
+                   sh 'java -version'
+               }
+           }
+           stage("Checkout Code"){
                steps {
                    git branch: 'main',
                           url: "${repoUrl}"
                }
            }
-           stage ('2-closing'){
-            steps{
-                echo "This is newapp"
-              }
+           stage("to-test-maven") {
+               steps {
+                   sh 'lsblk'
+               }
            }
-        }
-    }
+       }
+}
 }
