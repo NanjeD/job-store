@@ -19,7 +19,7 @@ def call(String repoUrl){
                    sh 'lsblk'
                }
            }
-           stage('This is code test'){
+           stage('code test'){
             steps{
                 sh 'pwd'
             }
