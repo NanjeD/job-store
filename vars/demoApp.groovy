@@ -1,4 +1,4 @@
-def seek(String repoUrl){
+def call(String repoUrl){
     pipeline {
        agent any
        stages {
@@ -14,11 +14,11 @@ def seek(String repoUrl){
                           url: "${repoUrl}"
                }
            }
-           stage("to-test-code"){
+           stage("to-test-maven") {
                steps {
                    sh 'lsblk'
                }
            }
        }
-}
+    }
 }
