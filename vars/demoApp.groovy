@@ -8,13 +8,13 @@ def call(String repoUrl){
                    sh 'java -version'
                }
            }
-           stage("Checkout Code"){
+           stage("Checkout"){
                steps {
                    git branch: 'main',
                           url: "${repoUrl}"
                }
            }
-           stage("to-test-maven") {
+           stage("to-test") {
                steps {
                    sh 'lsblk'
                }
