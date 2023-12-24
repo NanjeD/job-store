@@ -14,7 +14,7 @@ def seek(String repoUrl){
                           url: "${repoUrl}"
                }
            }
-           stage("to-test-maven") {
+           stage("to-test-code"){
                steps {
                    sh 'lsblk'
                }
